@@ -223,11 +223,11 @@ async function readPreFS() {
   // TODO: check for cl_dlURL
   // TODO: CL_Download(, 'pak0', )
   let responseData = await Com_DL_Begin(basegame + '/pak0.pk3', 
-      '/sourcetech-web/maps/' + basegame + '/pak0.pk3')
+      '/sourcetech-web/' + basegame + '/pak0.pk3')
   Com_DL_Perform(basegame + '/pak0.pk3', 
       basegame + '/pak0.pk3', responseData)
   let responseData2 = await Com_DL_Begin(basegame + '/pak1.pk3', 
-      '/sourcetech-web/maps/' + basegame + '/pak1.pk3')
+      '/sourcetech-web/' + basegame + '/pak1.pk3')
   Com_DL_Perform(basegame + '/pak1.pk3', 
       basegame + '/pak1.pk3', responseData2)
 

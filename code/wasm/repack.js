@@ -161,11 +161,11 @@ async function convertImage(pk3File) {
 
 async function checkForRepack(request, response, next) {
 
-  let isPk3Path = request.originalUrl.includes('sourcetech-web/maps/')
+  let isPk3Path = request.originalUrl.includes('sourcetech-web/')
     && request.originalUrl.includes('.pk3')
   // definitely requesting a repacked file
   if(isPk3Path) {
-    let mapPath = request.originalUrl.substr(request.originalUrl.indexOf('sourcetech-web/maps/') + 5)
+    let mapPath = request.originalUrl.substr(request.originalUrl.indexOf('sourcetech-web/') + 5)
     .replace(/\?.*$/gi, '')
       // form a docs/MODNAME/pak0.pk3dir style path
     if(fs.existsSync(path.join(SOURCE_PATH, mapPath + 'dir'))) {

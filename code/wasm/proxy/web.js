@@ -174,7 +174,7 @@ function layeredDir(filename) {
 
     if(filename.endsWith('.pk3dir/scripts')) {
       let maps = filename.substring(GAME_DIRECTORY.length, filename.indexOf('.pk3dir') + 7)
-      let newPath = path.join(ASSETS_DIRECTORY, maps, 'maps')
+      let newPath = path.join(ASSETS_DIRECTORY, maps, 'sourcetech-web')
       let bsps = fs.readdirSync(path.resolve(newPath))
         .filter(dir => dir.endsWith('.bsp'))
         .map(dir => dir.replace('.bsp', '.shader'))
@@ -385,7 +385,7 @@ function respondRequest(request, response) {
     && localName.endsWith('.shader')) {
     let mapName = path.basename(localName.substring(0, localName.length - 7))
     let newPath = path.join(ASSETS_DIRECTORY, 
-      localName.substring(GAME_DIRECTORY.length), '../../sourcetech-web/maps/', mapName + '.bsp')
+      localName.substring(GAME_DIRECTORY.length), '../../sourcetech-web/', mapName + '.bsp')
     if(fs.existsSync(newPath)) {
       return makePaletteShader(localName, response)
     }
