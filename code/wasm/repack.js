@@ -7,7 +7,7 @@ const {spawnSync} = require('child_process')
 const MODNAME = 'milab'
 const DEFAULT_MODEL = 'munro'
 const SOURCE_PATH = path.join(__dirname, '../../docs/')
-const OUTPUT_PATH = path.join(__dirname, '../../docs/s')
+const OUTPUT_PATH = path.join(__dirname, '../../docs/')
 
 const SUPPORTED_FORMATS = [
   '.cfg', '.qvm', '.jts', '.bot',
