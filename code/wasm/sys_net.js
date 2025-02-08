@@ -692,14 +692,14 @@ function CL_Download(cmd, name, auto) {
             }
             return responseData
           }),
-          await Com_DL_Begin(localName + '.bsp', basegame + '/pak0.pk3dir/sourcetech-web/' + localName + '.bsp')
+          await Com_DL_Begin(localName + '.bsp', basegame + '/pak0.pk3dir/maps/' + localName + '.bsp')
           .then(responseData => {
             if(responseData && !nameStr.match(/\.bsp$/)) {
               nameStr = 'sourcetech-web/' + localName + '.bsp'
             }
             return responseData
           }),
-          await Com_DL_Begin(localName + '.bsp', gamedir + '/pak0.pk3dir/sourcetech-web/' + localName + '.bsp')
+          await Com_DL_Begin(localName + '.bsp', gamedir + '/pak0.pk3dir/maps/' + localName + '.bsp')
           .then(responseData => {
             if(responseData && !nameStr.match(/\.bsp$/)) {
               nameStr = 'sourcetech-web/' + localName + '.bsp'
@@ -722,11 +722,11 @@ function CL_Download(cmd, name, auto) {
   
         let responseData2 = (await Promise.all([
           await Com_DL_Begin(localName + '.aas', remoteURL + '.aas'),
-          await Com_DL_Begin(localName + '.aas', basegame + '/pak0.pk3dir/sourcetech-web/' + localName + '.aas'),
-          await Com_DL_Begin(localName + '.aas', gamedir + '/pak0.pk3dir/sourcetech-web/' + localName + '.aas'),
+          await Com_DL_Begin(localName + '.aas', basegame + '/pak0.pk3dir/maps/' + localName + '.aas'),
+          await Com_DL_Begin(localName + '.aas', gamedir + '/pak0.pk3dir/maps/' + localName + '.aas'),
         ])).filter(f => f)[0]
 
-        Com_DL_Perform(gamedir + '/sourcetech-web/' + localName + '.aas', gamedir + '/' + localName, responseData2)
+        Com_DL_Perform(gamedir + '/maps/' + localName + '.aas', gamedir + '/' + localName, responseData2)
 
 
       //} else {
