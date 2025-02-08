@@ -688,21 +688,21 @@ function CL_Download(cmd, name, auto) {
           await Com_DL_Begin(localName + '.bsp', remoteURL + '.bsp')
           .then(responseData => {
             if(responseData && !nameStr.match(/\.bsp$/)) {
-              nameStr = 'maps/' + localName + '.bsp'
+              nameStr = 'sourcetech-web/maps/' + localName + '.bsp'
             }
             return responseData
           }),
           await Com_DL_Begin(localName + '.bsp', basegame + '/pak0.pk3dir/maps/' + localName + '.bsp')
           .then(responseData => {
             if(responseData && !nameStr.match(/\.bsp$/)) {
-              nameStr = 'maps/' + localName + '.bsp'
+              nameStr = 'sourcetech-web/maps/' + localName + '.bsp'
             }
             return responseData
           }),
           await Com_DL_Begin(localName + '.bsp', gamedir + '/pak0.pk3dir/maps/' + localName + '.bsp')
           .then(responseData => {
             if(responseData && !nameStr.match(/\.bsp$/)) {
-              nameStr = 'maps/' + localName + '.bsp'
+              nameStr = 'sourcetech-web/maps/' + localName + '.bsp'
             }
             return responseData
           }),
