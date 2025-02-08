@@ -726,7 +726,7 @@ function CL_Download(cmd, name, auto) {
           await Com_DL_Begin(localName + '.aas', gamedir + '/pak0.pk3dir/maps/' + localName + '.aas'),
         ])).filter(f => f)[0]
 
-        Com_DL_Perform(gamedir + '/maps/' + localName + '.aas', gamedir + '/' + localName, responseData2)
+        Com_DL_Perform(gamedir + '/sourcetech-web/maps/' + localName + '.aas', gamedir + '/' + localName, responseData2)
 
 
       //} else {

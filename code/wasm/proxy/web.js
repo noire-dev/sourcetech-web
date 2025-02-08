@@ -385,7 +385,7 @@ function respondRequest(request, response) {
     && localName.endsWith('.shader')) {
     let mapName = path.basename(localName.substring(0, localName.length - 7))
     let newPath = path.join(ASSETS_DIRECTORY, 
-      localName.substring(GAME_DIRECTORY.length), '../../maps/', mapName + '.bsp')
+      localName.substring(GAME_DIRECTORY.length), '../../sourcetech-web/maps/', mapName + '.bsp')
     if(fs.existsSync(newPath)) {
       return makePaletteShader(localName, response)
     }
